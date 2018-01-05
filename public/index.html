@@ -14,31 +14,26 @@
 
 </head>
 
-<body>
+<body class="text-center">
   <div class="container">
     <br>
     <div class="jumbotron">
-      <h1 class="text-center">
-        URL Shortener Microservice
-      </h1>
+      <h1>URL Shortener Microservice</h1>
       <br>
-      <p class="text-center">
+      <p>
         <strong>User Story</strong>
       </p>
-      <p class="text-center">
-        -
-      </p>
-      <p class="text-center">
+      <p> -</p>
+      <p>
         <strong>Short URL Creation</strong>
       </p>
-      <p class="text-center">example: POST [project_url]/api/shorturl/new - https://www.google.com
-      </p>
+      <p>example: POST [project_url]/api/shorturl/new - https://www.google.com</p>
 
       <div class="row justify-content-center">
         <div class="col-lg-6">
           <form action="api/shorturl/new" method="POST">
             <div class="form-group">
-              <input type="text" class="form-control" value="https://www.freecodecamp.com">
+              <input type="text" class="form-control" value="https://www.freecodecamp.com" name="url">
             </div>
             <button type="submit" class="btn btn-primary">POST URL</button>
           </form>

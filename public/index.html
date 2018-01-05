@@ -23,11 +23,15 @@
       <p>
         <strong>User Story</strong>
       </p>
-      <p> -</p>
+      <p>I can POST a URL to /api/shorturl/new and I will receive a shortened URL in the JSON response. Example : {"original_url":"www.google.com","short_url":1}</p>
+
+      <p>If I pass an invalid URL that doesn't follow the http(s)://www.example.com(/more/routes) format, the JSON response
+        will contain an error like {"error":"invalid URL"}</p>
+      <p>When I visit the shortened URL, it will redirect me to my original link.</p>
       <p>
         <strong>Short URL Creation</strong>
       </p>
-      <p>example: POST [project_url]/api/shorturl/new - https://www.google.com</p>
+      <p>example: POST /api/shorturl/new - https://www.google.com</p>
 
       <div class="row justify-content-center">
         <div class="col-lg-6">
@@ -40,10 +44,12 @@
         </div>
       </div>
       <br>
+      <h4>Built with Node, Express, MongoDB</h4>
       <footer>
         <div>a freeCodeCamp
           <i class="fab fa-free-code-camp"></i> Project</div>
       </footer>
+
     </div>
 
   </div>

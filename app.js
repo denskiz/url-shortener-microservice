@@ -8,7 +8,7 @@ const validUrl = require('valid-url');
 const shortUrl = require('./models/model');
 
 mongoose.connect(
-  'mongodb://dennis:dennis@ds237717.mlab.com:37717/fcc-url-shortener-micoservice'
+  process.env.MONGODB_URI
 );
 mongoose.Promise = global.Promise;
 //process.env.MONGODB_URI

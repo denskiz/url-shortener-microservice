@@ -43,8 +43,6 @@ app.post('/api/shorturl/new', (req, res) => {
 });
 
 app.get('/api/shorturl/3', (req, res) => {
-  // shortUrl.findOne({ shorterUrl: 3 }, (err, data) => {
-  //   if (err) return res.send('Error reading database');
 
   res.redirect('https://www.freecodecamp.com');
   // });

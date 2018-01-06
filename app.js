@@ -7,9 +7,8 @@ const mongoose = require('mongoose');
 const validUrl = require('valid-url');
 const shortUrl = require('./models/model');
 
-mongoose.connect(
-  process.env.MONGODB_URI
-);
+mongoose.connect(process.env.MONGODB_URI);
+
 mongoose.Promise = global.Promise;
 //process.env.MONGODB_URI
 app.use(cors());

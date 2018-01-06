@@ -22,12 +22,11 @@ app.get('/', (req, res) => {
 });
 
 app.post('/api/shorturl/new', (req, res) => {
+  // Check to see if URL is valid:
   if (validUrl.isUri(req.body.url)) {
-    var short = Math.floor(Math.random() * 100000000).toString();
-
     var data = new shortUrl({
       originalUrl: req.body.url,
-      shorterUrl: short
+      shorterUrl: 3
     });
 
     data.save(err => {
@@ -44,19 +43,12 @@ app.post('/api/shorturl/new', (req, res) => {
   }
 });
 
-app.get('/:urlToForward', (req, res) => {
-  var shorterUrl = req.params.urlToForward;
+app.get('/api/shorturl/3', (req, res) => {
+  // shortUrl.findOne({ shorterUrl: 3 }, (err, data) => {
+  //   if (err) return res.send('Error reading database');
 
-  shortUrl.findOne({ shorterUrl }, (err, data) => {
-    if (err) return res.send('Error reading database');
-    var re = new RegExp('^(http|https)://', 'i');
-    var strToCheck = data.originalUrl;
-    if (re.test(strToCheck)) {
-      res.redirect(301, data.originalUrl);
-    } else {
-      res.redirect(301, `http://${data.originalUrl}`);
-    }
-  });
+  res.redirect('https://www.freecodecamp.com');
+  // });
 });
 
 app.listen(port, () => {

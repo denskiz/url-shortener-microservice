@@ -36,13 +36,26 @@
       <div class="row justify-content-center">
         <div class="col-lg-6">
           <form action="api/shorturl/new" method="POST">
-            <div class="form-group">
+            <div class="input-group">
               <input type="text" class="form-control" value="https://www.freecodecamp.com" name="url">
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-primary">Post Url</button>
+              </div>
             </div>
-            <button type="submit" class="btn btn-primary">POST URL</button>
           </form>
         </div>
       </div>
+      <br>
+      <p>
+        <strong>Example Usage:</strong>
+      </p>
+      <p>
+        <a href="/api/shorturl/3">/api/shorturl/3</a>
+      </p>
+      <p>
+        <strong>Will Redirect to:</strong>
+      </p>
+      <p>https://www.freecodecamp.org/</p>
       <br>
       <h4>Built with Node, Express, MongoDB</h4>
       <footer>

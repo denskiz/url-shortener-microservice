@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const urlSchema = new Schema({
   originalUrl: String,
-  shorterUrl: String
+  shorterUrl: Number
 });
 
 const ModelClass = mongoose.model('shortUrl', urlSchema);

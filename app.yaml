@@ -10,4 +10,4 @@ resources:
   disk_size_gb: 10
 
 env_variables:
-  MONGO_URI: 'mongodb://dennis:dennis@ds237717.mlab.com:37717/fcc-url-shortener-micoservice'
+  MONGODB_URI: 'mongodb://dennis:dennis@ds237717.mlab.com:37717/fcc-url-shortener-micoservice'

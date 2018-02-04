@@ -43,7 +43,6 @@ app.post('/api/shorturl/new', (req, res) => {
 });
 
 app.get('/api/shorturl/3', (req, res) => {
-
   res.redirect('https://www.freecodecamp.com');
   // });
 });
